@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ClientRequest;
 use Illuminate\Http\Request;
 use App\Models\Models\ModelCliente;
+use App\Models\User;
 
 class ClientController extends Controller
 {
@@ -19,14 +20,14 @@ class ClientController extends Controller
 
     public function index()
     {
-        $cliente=$this->cliente->all();
+        $cliente=$this->cliente->paginate(5);
         return view('index', compact('cliente'));
     }
 
     
     public function create()
     {
-        $cliente=$this->cliente->all();
+        $cliente=User::all();
         return view('create', compact('cliente'));
     }
 

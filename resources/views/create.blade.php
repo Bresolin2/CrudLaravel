@@ -28,9 +28,9 @@
             <div class="form-group">
                 @csrf
 
-                <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome" value="{{$cliente->nome ?? ''}}" required><br>
-                <input class="form-control" type="text" name="telefone" id="telefone" placeholder="Telefone" value="{{$cliente->telefone ?? ''}}" required><br>
-                <input class="form-control" type="text" name="email" id="email" placeholder="E-mail" value="{{$cliente->email ?? ''}}" required><br>
+                <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome" value="{{$clientes->nome ?? ''}}" required><br>
+                <input class="form-control" type="text" name="telefone" id="telefone" placeholder="Telefone" value="{{$clientes->telefone ?? ''}}" required><br>
+                <input class="form-control" type="text" name="email" id="email" placeholder="E-mail" value="{{$clientes->email ?? ''}}" required><br>
                 <input class="btn btn-primary" type="submit" value=" @if(isset($id)) Editar @else Cadastrar @endif ">
             </div>
         </form>

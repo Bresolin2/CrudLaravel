@@ -12,7 +12,7 @@
 
     <div class="col-8 m-auto">
         @csrf
-        <table class="table text-center">
+        <table class="table table-bordered">
             <thead class="table-dark">
 
                 <tr>
@@ -51,5 +51,6 @@
 
             </tbody>
         </table>
+        {{$cliente->links()}}
     </div>
 @endsection
